@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>non-s — Software Engineer</title>
+    <meta name="description" content="Hub de projetos de Julio Fernandes — Software Engineer.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="matrix"></canvas>
+
+<main class="container">
+    <div class="terminal-card">
+        <div class="term-header">
+            <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+            <span class="term-title">bash — non-s@root: ~</span>
+        </div>
+        <div class="term-body">
+            <div class="line"><span class="p1">┌──(non-s㉿root)-[~]</span></div>
+            <div class="line"><span class="p2">└─$</span> <span id="typed"></span><span class="cur">▌</span></div>
+            <div class="output">
+                <div class="out-line"><span class="key">NAME</span><span class="sep">:</span><span class="val">Julio Fernandes</span></div>
+                <div class="out-line"><span class="key">ROLE</span><span class="sep">:</span><span class="val">Software Engineer · IT Instructor</span></div>
+                <div class="out-line"><span class="key">FOCUS</span><span class="sep">:</span><span class="val">Distributed Systems · Android · Networking</span></div>
+                <div class="out-line"><span class="key">OS</span><span class="sep">:</span><span class="val">Arch Linux · Debian · Ubuntu</span></div>
+                <div class="out-line"><span class="key">STATUS</span><span class="sep">:</span><span class="val online"><i class="fas fa-circle"></i> ONLINE</span></div>
+            </div>
+        </div>
+    </div>
+
+    <h2 class="projects-title"><span class="acc">$</span> cat /var/log/projects.log</h2>
+
+    <div class="projects-grid">
+        <a class="project-card" href="https://non-s.github.io/portfolio" target="_blank">
+            <div class="proj-icon"><i class="fas fa-user-circle"></i></div>
+            <div class="proj-info">
+                <div class="proj-name">Portfolio</div>
+                <div class="proj-desc">Site pessoal completo com projetos, skills e contato.</div>
+                <div class="proj-tags"><span>HTML</span><span>CSS</span><span>JS</span></div>
+            </div>
+            <div class="proj-arrow"><i class="fas fa-arrow-right"></i></div>
+        </a>
+
+        <a class="project-card" href="https://non-s.github.io/TakStud" target="_blank">
+            <div class="proj-icon takstud"><i class="fas fa-graduation-cap"></i></div>
+            <div class="proj-info">
+                <div class="proj-name">TakStud</div>
+                <div class="proj-desc">Sistema web de gestão educacional com dashboard, alunos e tarefas.</div>
+                <div class="proj-tags"><span>HTML</span><span>CSS</span><span>JS</span></div>
+            </div>
+            <div class="proj-arrow"><i class="fas fa-arrow-right"></i></div>
+        </a>
+
+        <a class="project-card" href="https://non-s.github.io/Uplift" target="_blank">
+            <div class="proj-icon uplift"><i class="fas fa-bolt"></i></div>
+            <div class="proj-info">
+                <div class="proj-name">Uplift</div>
+                <div class="proj-desc">App de frases motivacionais com 5 temas, favoritos e compartilhamento.</div>
+                <div class="proj-tags"><span>HTML</span><span>CSS</span><span>JS</span></div>
+            </div>
+            <div class="proj-arrow"><i class="fas fa-arrow-right"></i></div>
+        </a>
+
+        <a class="project-card" href="https://non-s.github.io/Profile-" target="_blank">
+            <div class="proj-icon cli"><i class="fas fa-terminal"></i></div>
+            <div class="proj-info">
+                <div class="proj-name">CLI P2P Chat</div>
+                <div class="proj-desc">Chat P2P descentralizado. Demo interativo com terminal no browser.</div>
+                <div class="proj-tags"><span>HTML</span><span>CSS</span><span>JS</span></div>
+            </div>
+            <div class="proj-arrow"><i class="fas fa-arrow-right"></i></div>
+        </a>
+    </div>
+
+    <div class="contact-row">
+        <a href="https://github.com/non-s" target="_blank" class="contact-link"><i class="fab fa-github"></i> github.com/non-s</a>
+        <a href="mailto:sourcenaiomiocc@gmail.com" class="contact-link"><i class="fas fa-envelope"></i> email</a>
+        <a href="https://linkedin.com/in/julio-cesar-fernandes-13b6073a9" target="_blank" class="contact-link"><i class="fab fa-linkedin"></i> linkedin</a>
+    </div>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
