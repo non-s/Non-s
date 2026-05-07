@@ -2,16 +2,20 @@
 const canvas = document.getElementById('matrix');
 const ctx = canvas.getContext('2d');
 
+const chars = 'アイウエオカキクケコサシスセソタチツテトナニヌネノ01アABCDEF0123456789'.split('');
+let cols, drops;
+
 function resize() {
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
+  const newCols = Math.floor(canvas.width / 16);
+  if (newCols !== cols) {
+    cols = newCols;
+    drops = Array(cols).fill(1);
+  }
 }
 resize();
 window.addEventListener('resize', resize);
-
-const chars = 'アイウエオカキクケコサシスセソタチツテトナニヌネノ01アABCDEF0123456789'.split('');
-const cols = Math.floor(canvas.width / 16);
-const drops = Array(cols).fill(1);
 
 function drawMatrix() {
   ctx.fillStyle = 'rgba(13,17,23,0.05)';
