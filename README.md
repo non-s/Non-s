@@ -24,3 +24,8 @@ The constraint is intentional. Knowing what the platform gives you for free — 
 - GitHub: [github.com/non-s](https://github.com/non-s)
 - LinkedIn: [linkedin.com/in/julio-cesar-fernandes-13b6073a9](https://linkedin.com/in/julio-cesar-fernandes-13b6073a9)
 - Email: sourcenaiomiocc@gmail.com
+
+
+## 📖 Book
+
+- [My Book on Amazon](https://www.amazon.com.br/dp/B0GZ4W4NJG)
