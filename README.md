@@ -3,7 +3,7 @@
 Hub: https://non-s.github.io/non-s
 
 Software Engineer · IT Instructor · Web · Distributed Systems · Networking
-
+h
 ## Projects
 
 | Project | What it demonstrates | Live |
@@ -22,7 +22,6 @@ The constraint is intentional. Knowing what the platform gives you for free — 
 ## Contact
 
 - GitHub: [github.com/non-s](https://github.com/non-s)
-- LinkedIn: [linkedin.com/in/julio-cesar-fernandes-13b6073a9](https://linkedin.com/in/julio-cesar-fernandes-13b6073a9)
 - Email: sourcenaiomiocc@gmail.com
 
 
