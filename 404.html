@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 — non-s</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='15' fill='%230d1117'/><text x='12' y='72' font-size='58' font-family='monospace' fill='%2300ff41' font-weight='700'>$_</text></svg>">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body { background:#0d1117; color:#c9d1d9; font-family:'Fira Code',monospace;
+               display:flex; align-items:center; justify-content:center;
+               min-height:100vh; text-align:center; padding:2rem; }
+        .num { font-size:6rem; font-weight:700; color:#00ff41; line-height:1; letter-spacing:-.02em; }
+        .cmd { font-size:1rem; color:#8b949e; margin:.8rem 0 .4rem; }
+        .err { font-size:.9rem; color:#f85149; margin-bottom:2rem; }
+        a { display:inline-block; background:#00ff41; color:#0d1117; font-family:'Fira Code',monospace;
+            font-weight:700; padding:.65rem 1.6rem; border-radius:7px; text-decoration:none;
+            font-size:.9rem; transition:opacity .2s; }
+        a:hover { opacity:.85; }
+    </style>
+</head>
+<body>
+    <div>
+        <div class="num">404</div>
+        <div class="cmd">$ cat pagina.txt</div>
+        <div class="err">cat: pagina.txt: Arquivo não encontrado</div>
+        <a href="./">← Voltar ao início</a>
+    </div>
+</body>
+</html>
