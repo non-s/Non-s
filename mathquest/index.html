@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+    <title>MathQuest — Aprenda matemática jogando</title>
+    <meta name="description" content="Jogo educacional de matemática em mundo aberto. Do 1º ao 9º ano: 181 fases do básico ao avançado.">
+    <meta name="theme-color" content="#0d1117">
+    <link rel="icon" href="icon.svg">
+    <link rel="manifest" href="manifest.json">
+    <meta property="og:title" content="MathQuest — Aprenda matemática jogando">
+    <meta property="og:description" content="Do zero à senioridade em matemática: 181 fases, mundo aberto, do 1º ao 9º ano.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="icon.svg">
+    <meta name="twitter:card" content="summary">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Fira+Code:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Loader -->
+<div id="loader" class="loader">
+    <div class="loader-dots"><span></span><span></span><span></span></div>
+    <p>Carregando o mundo…</p>
+</div>
+
+<!-- Boas-vindas: pede um apelido -->
+<div id="welcome" class="welcome" style="display:none">
+    <div class="welcome-card">
+        <div class="welcome-logo">∑ MathQuest</div>
+        <h1>Bem-vindo, aventureiro!</h1>
+        <p class="welcome-sub">Você vai sair do zero até o avançado em matemática. 9 regiões, 181 fases, do 1º ao 9º ano.</p>
+        <input id="nickInput" class="field" placeholder="Como devemos te chamar?" maxlength="30" autocomplete="off">
+        <button id="btnStart" class="btn-primary">Começar a jornada</button>
+        <p id="welcomeError" class="welcome-error"></p>
+        <p class="welcome-tip">Seu progresso é salvo automaticamente — você pode voltar quando quiser.</p>
+    </div>
+</div>
+
+<!-- App -->
+<div id="app" class="app" style="display:none">
+
+    <!-- HUD topo -->
+    <header class="hud">
+        <div class="hud-left">
+            <button id="btnSwapName" class="hud-nick" title="Mudar nome">
+                <span class="avatar">🎓</span>
+                <span id="hudNick">Aluno(a)</span>
+            </button>
+        </div>
+        <div class="hud-stats">
+            <div class="stat" title="XP total"><span>⚡</span><b id="hudXp">0</b></div>
+            <div class="stat" title="Estrelas"><span>⭐</span><b id="hudStars">0</b></div>
+            <div class="stat" title="Fases concluídas"><span>🗺️</span><b id="hudPhases">0/181</b></div>
+        </div>
+        <div class="hud-right">
+            <button id="btnAch"  class="hud-btn" title="Conquistas">🏅</button>
+            <button id="btnMute" class="hud-btn" title="Som">🔊</button>
+        </div>
+    </header>
+
+    <!-- Tela: mapa -->
+    <main id="mapView" class="map-view">
+        <div id="map" class="map"></div>
+        <footer class="map-foot">
+            Estude. Erre. Tente de novo. Cada estrela é um pedaço de cérebro mais forte.
+        </footer>
+    </main>
+
+    <!-- Tela: fase -->
+    <main id="phaseView" class="phase-view" style="display:none">
+        <div class="phase-top">
+            <button id="btnBackMap" class="iconbtn" title="Voltar">←</button>
+            <div class="phase-title-wrap">
+                <div id="phaseTitle" class="phase-title">—</div>
+                <div class="phase-meta">
+                    <span id="phaseProg" class="prog">1 / 5</span>
+                    <span id="hearts" class="hearts">❤❤❤</span>
+                </div>
+            </div>
+        </div>
+        <section class="qcard">
+            <div id="qStem" class="q-stem"></div>
+            <div id="qOpts" class="q-opts"></div>
+            <div class="qfoot">
+                <button id="btnNext" class="btn-primary" style="display:none">Próxima →</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Tela: resultado -->
+    <main id="resultView" class="result-view" style="display:none">
+        <div class="result-card">
+            <div id="resultStars" class="result-stars">☆☆☆</div>
+            <h2 id="resultMsg">—</h2>
+            <p id="resultDetail" class="result-detail"></p>
+            <div class="result-actions">
+                <button id="btnRetry" class="btn-secondary">Tentar de novo</button>
+                <button id="btnBackFromRes" class="btn-primary">Voltar ao mapa</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Drawer: conquistas -->
+    <aside id="achDrawer" class="ach-drawer">
+        <header>
+            <h3>Conquistas</h3>
+            <button id="btnCloseAch" class="iconbtn">✕</button>
+        </header>
+        <div id="achList" class="ach-list"></div>
+    </aside>
+</div>
+
+<!-- Toast -->
+<div id="toast" class="toast"></div>
+
+<script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+<script src="script.js"></script>
+</body>
+</html>
