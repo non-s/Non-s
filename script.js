@@ -61,3 +61,15 @@ const HUB_SID = crypto.randomUUID ? crypto.randomUUID() : Math.random().toString
     });
     ch.subscribe(async s => { if (s === 'SUBSCRIBED') await ch.track({ t: Date.now() }); });
 })();
+
+/** Handles errors. @param {Error} err @param {string} [context] */
+function handleError(err, context) {
+  const msg = (err && err.message) || String(err) || "Erro inesperado";
+  console.error("[handleError]", context, err);
+  (typeof showStatus === "function") && showStatus(msg, "error");
+}
+
+/** Returns true if every string value is non-empty after trim. @param {...string} values */
+function validateRequired(...values) {
+  return values.every(v => typeof v === "string" && v.trim().length > 0);
+}
