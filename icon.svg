@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">non-s</title>
+  <desc id="desc">Terminal prompt icon for non-s.</desc>
+  <rect width="512" height="512" rx="96" fill="#0d1117"/>
+  <text x="82" y="303" font-size="144" font-family="Consolas, 'Fira Code', monospace" font-weight="700" fill="#00ff41">$_</text>
+  <rect x="90" y="350" width="332" height="24" rx="12" fill="#00ff41" opacity=".55"/>
+</svg>
+
