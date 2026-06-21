@@ -60,9 +60,10 @@ const HUB_SID = crypto.randomUUID ? crypto.randomUUID() : Math.random().toString
 (async () => {
   try {
     const app = firebase.initializeApp(window.firebaseConfig);
-    await firebase.auth().signInAnonymously();
+    const credential = await firebase.auth().signInAnonymously();
+    const userId = credential.user?.uid || firebase.auth().currentUser?.uid || HUB_SID;
     const db = firebase.database(app);
-    const visitorRef = db.ref(`non_s_presence/${HUB_SID}`);
+    const visitorRef = db.ref(`non_s_presence/${userId}`);
     const connectedRef = db.ref('.info/connected');
 
     connectedRef.on('value', snapshot => {
