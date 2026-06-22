@@ -20,10 +20,17 @@
       }
     },
     "non_s_presence": {
-      ".read": "auth != null",
+      ".indexOn": ["t"],
+      ".read": "auth != null && query.orderByChild == 't' && query.limitToLast <= 500",
       "$uid": {
-        ".write": "auth != null && auth.uid == $uid",
-        ".validate": "!newData.exists() || (newData.hasChildren(['t']) && newData.child('t').isNumber())"
+        ".write": "auth != null && (auth.uid == $uid || (!newData.exists() && data.exists() && data.child('t').isNumber() && data.child('t').val() < now - 120000))",
+        ".validate": "!newData.exists() || newData.hasChildren(['t'])",
+        "t": {
+          ".validate": "newData.isNumber() && newData.val() <= now + 10000 && newData.val() >= now - 300000"
+        },
+        "$other": {
+          ".validate": false
+        }
       }
     },
     ".read": false,
